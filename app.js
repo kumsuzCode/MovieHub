@@ -6,6 +6,6 @@ if (form) {
     const userInput = document.getElementById("search-bar").value;
     if (!userInput) return;
     localStorage.setItem("input", userInput);
-    window.location.href = `${window.location.origin}/search.html`;
+    window.location.href = `${window.location.origin}/MovieHub/search.html`;
   });
 }
