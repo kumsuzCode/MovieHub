@@ -160,9 +160,9 @@ form {
 
 #results {
   background-color: rgb(245, 245, 245);
-  /*height: calc(100vh - 80px);*/
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100%;
+  overflow: hidden;
 }
 
 .results__title {
@@ -187,33 +187,37 @@ form {
 
 .result__movie {
   width: 200px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   margin-right: 70px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  box-shadow: 0 5px 40px 0 rgb(0, 0, 0, 0.55);
+  overflow: hidden;
+  transition: all 300ms ease;
 }
 
 h3 {
-  margin: 0;
+  margin-left: 5px;
   text-align: left;
   margin-bottom: 5px;
   font-size: 14px;
 }
 
 h4 {
+  margin-left: 5px;
   color: rgba(128, 128, 128, 0.639);
   font-size: 12px;
 }
 
 .movie__img--wrapper {
-  width: 150px;
-  height: 200px;
+  width: fit-content;
+  height: 250px;
   margin-bottom: 10px;
-  transition: all 300ms ease;
-  box-shadow: 0 5px 40px 0 rgb(0, 0, 0, 0.55);
 }
 
-.movie__img--wrapper:hover {
+.result__movie:hover {
   transform: scale(1.07);
 }
 

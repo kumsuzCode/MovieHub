@@ -5,6 +5,6 @@ if (form) {
     const userInput = document.getElementById("search-bar").value;
     if (!userInput) return;
     localStorage.setItem("input", userInput);
-    window.location.href = "http://127.0.0.1:5500/search.html";
+    window.location.href = `${window.location.origin}/search.html`;
   });
 }
