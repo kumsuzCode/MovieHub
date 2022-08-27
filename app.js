@@ -1,11 +1,18 @@
 const form = document.getElementById("form");
-
+console.log(window.location.origin);
 if (form) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const userInput = document.getElementById("search-bar").value;
     if (!userInput) return;
     localStorage.setItem("input", userInput);
-    window.location.href = `${window.location.origin}/MovieHub/search.html`;
+
+    // This conditional ensures correct routing based off whether or not
+    // the app is being run on GH pages or not.
+    if (window.location.origin === "https://kumsuzcode.github.io") {
+      window.location.href = `${window.location.origin}/MovieHub/search.html`;
+    } else {
+      window.location.href = `${window.location.origin}/search.html`;
+    }
   });
 }

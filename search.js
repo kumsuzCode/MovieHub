@@ -1,12 +1,16 @@
 async function searchMovies() {
+  const results = document.querySelector(".results__movies");
+  results.classList += " movies__loading";
+  console.log(results.classList);
   const userInput = localStorage.getItem("input");
   console.log(userInput);
   const data = await fetch(
     `https://www.omdbapi.com/?apikey=2bb078d&s=${userInput}`
   );
+  results.classList.remove("movies__loading");
+  console.log(results.classList);
   const processedData = await data.json();
   const htmlData = processedData.Search.map((m) => hmtlMovie(m)).join("");
-  const results = document.querySelector(".results__movies");
   console.log(results);
   results.innerHTML = htmlData;
 }
