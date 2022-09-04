@@ -10,7 +10,7 @@ if (form) {
     // This conditional ensures correct routing based off whether or not
     // the app is being run on GH pages or not.
     if (window.location.origin === "https://kumsuzcode.github.io") {
-      window.location.href = `${window.location.origin}/MovieHub/search.html`;
+      window.location.href = `${window.location.origin}/movie-hub/search.html`;
     } else {
       window.location.href = `${window.location.origin}/search.html`;
     }
